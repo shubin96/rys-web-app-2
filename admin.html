@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后台管理 - RenzYour Style 街舞大赛</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 登录页面 -->
+    <div id="loginPage" class="login-page">
+        <div class="login-container">
+            <div class="login-header">
+                <div class="login-logo">
+                    <img src="images/logo.png" alt="RenzYour Style">
+                    <h1>RenzYour <span class="style-text">Style</span></h1>
+                </div>
+                <h2>后台管理系统</h2>
+                <p>请输入管理员账号密码</p>
+            </div>
+            <form class="login-form" id="loginForm">
+                <div class="form-group">
+                    <label for="username">用户名</label>
+                    <input type="text" id="username" name="username" required>
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="form-group">
+                    <label for="password">密码</label>
+                    <input type="password" id="password" name="password" required>
+                    <i class="fas fa-lock"></i>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="rememberMe">
+                        <span class="checkmark"></span>
+                        记住我
+                    </label>
+                    <a href="#" class="forgot-password">忘记密码？</a>
+                </div>
+                <button type="submit" class="login-btn">
+                    <span>登录</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+        </div>
+        <div class="login-decoration">
+            <div class="decoration-circle"></div>
+            <div class="decoration-grid"></div>
+        </div>
+    </div>
+
+    <!-- 管理后台主界面 -->
+    <div id="adminDashboard" class="admin-dashboard" style="display: none;">
+        <!-- 侧边栏 -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <img src="images/logo.png" alt="RenzYour Style">
+                    <span>管理后台</span>
+                </div>
+                <button class="sidebar-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <nav class="sidebar-nav">
+                <ul class="nav-menu">
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link" data-section="dashboard">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>仪表盘</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-section="slides">
+                            <i class="fas fa-images"></i>
+                            <span>幻灯片管理</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-section="schedule">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>赛程管理</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-section="registration">
+                            <i class="fas fa-user-plus"></i>
+                            <span>报名管理</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-section="media">
+                            <i class="fas fa-photo-video"></i>
+                            <span>媒体管理</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-section="news">
+                            <i class="fas fa-newspaper"></i>
+                            <span>新闻管理</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-section="settings">
+                            <i class="fas fa-cog"></i>
+                            <span>系统设置</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="user-details">
+                        <span class="user-name">管理员</span>
+                        <span class="user-role">超级管理员</span>
+                    </div>
+                </div>
+                <button class="logout-btn" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>退出登录</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- 主内容区域 -->
+        <main class="main-content">
+            <!-- 顶部栏 -->
+            <header class="top-bar">
+                <div class="top-bar-left">
+                    <button class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1 class="page-title">仪表盘</h1>
+                </div>
+                <div class="top-bar-right">
+                    <div class="search-box">
+                        <input type="text" placeholder="搜索...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="notifications">
+                        <button class="notification-btn">
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-badge">3</span>
+                        </button>
+                    </div>
+                    <div class="user-menu">
+                        <button class="user-menu-btn">
+                            <i class="fas fa-user-circle"></i>
+                            <span>管理员</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- 内容区域 -->
+            <div class="content-area">
+                <!-- 仪表盘 -->
+                <section id="dashboard" class="content-section active">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>总报名人数</h3>
+                                <p class="stat-number">1,234</p>
+                                <span class="stat-change positive">+12% 本周</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>网站访问量</h3>
+                                <p class="stat-number">45,678</p>
+                                <span class="stat-change positive">+8% 本周</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>活动场次</h3>
+                                <p class="stat-number">24</p>
+                                <span class="stat-change neutral">无变化</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>奖金池</h3>
+                                <p class="stat-number">¥500K</p>
+                                <span class="stat-change positive">+5% 本月</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-grid">
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <h3>最新报名</h3>
+                                <a href="#" class="view-all">查看全部</a>
+                            </div>
+                            <div class="recent-registrations">
+                                <div class="registration-item">
+                                    <div class="user-avatar">张</div>
+                                    <div class="user-info">
+                                        <span class="user-name">张三</span>
+                                        <span class="user-category">Breaking 成人组</span>
+                                    </div>
+                                    <span class="registration-time">2分钟前</span>
+                                </div>
+                                <div class="registration-item">
+                                    <div class="user-avatar">李</div>
+                                    <div class="user-info">
+                                        <span class="user-name">李四</span>
+                                        <span class="user-category">Popping 青少年组</span>
+                                    </div>
+                                    <span class="registration-time">5分钟前</span>
+                                </div>
+                                <div class="registration-item">
+                                    <div class="user-avatar">王</div>
+                                    <div class="user-info">
+                                        <span class="user-name">王五</span>
+                                        <span class="user-category">Hip-hop 成人组</span>
+                                    </div>
+                                    <span class="registration-time">10分钟前</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <h3>系统状态</h3>
+                            </div>
+                            <div class="system-status">
+                                <div class="status-item">
+                                    <span class="status-label">网站状态</span>
+                                    <span class="status-value online">正常运行</span>
+                                </div>
+                                <div class="status-item">
+                                    <span class="status-label">数据库</span>
+                                    <span class="status-value online">连接正常</span>
+                                </div>
+                                <div class="status-item">
+                                    <span class="status-label">服务器负载</span>
+                                    <span class="status-value warning">中等</span>
+                                </div>
+                                <div class="status-item">
+                                    <span class="status-label">存储空间</span>
+                                    <span class="status-value online">充足</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 幻灯片管理 -->
+                <section id="slides" class="content-section">
+                    <div class="section-header">
+                        <h2>幻灯片管理</h2>
+                        <button class="btn btn-primary" id="addSlideBtn">
+                            <i class="fas fa-plus"></i>
+                            添加幻灯片
+                        </button>
+                    </div>
+                    <div class="slides-grid">
+                        <div class="slide-item">
+                            <div class="slide-preview">
+                                <img src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=400&h=250&fit=crop" alt="幻灯片1">
+                                <div class="slide-overlay">
+                                    <button class="btn-icon edit-slide">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="btn-icon delete-slide">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="slide-info">
+                                <h4>主横幅 - 比赛宣传</h4>
+                                <p>状态: <span class="status active">已启用</span></p>
+                                <p>排序: 1</p>
+                            </div>
+                        </div>
+                        <div class="slide-item">
+                            <div class="slide-preview">
+                                <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=400&h=250&fit=crop" alt="幻灯片2">
+                                <div class="slide-overlay">
+                                    <button class="btn-icon edit-slide">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="btn-icon delete-slide">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="slide-info">
+                                <h4>评委介绍</h4>
+                                <p>状态: <span class="status active">已启用</span></p>
+                                <p>排序: 2</p>
+                            </div>
+                        </div>
+                        <div class="slide-item">
+                            <div class="slide-preview">
+                                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop" alt="幻灯片3">
+                                <div class="slide-overlay">
+                                    <button class="btn-icon edit-slide">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="btn-icon delete-slide">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="slide-info">
+                                <h4>赞助商展示</h4>
+                                <p>状态: <span class="status inactive">已禁用</span></p>
+                                <p>排序: 3</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 赛程管理 -->
+                <section id="schedule" class="content-section">
+                    <div class="section-header">
+                        <h2>赛程管理</h2>
+                        <button class="btn btn-primary" id="addEventBtn">
+                            <i class="fas fa-plus"></i>
+                            添加赛程
+                        </button>
+                    </div>
+                    <div class="schedule-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>日期</th>
+                                    <th>时间</th>
+                                    <th>活动名称</th>
+                                    <th>地点</th>
+                                    <th>状态</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2024-01-13</td>
+                                    <td>09:00-12:00</td>
+                                    <td>选手报到</td>
+                                    <td>主会场</td>
+                                    <td><span class="status completed">已完成</span></td>
+                                    <td>
+                                        <button class="btn-icon edit-event">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn-icon delete-event">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2024-01-13</td>
+                                    <td>14:00-18:00</td>
+                                    <td>开幕式</td>
+                                    <td>主舞台</td>
+                                    <td><span class="status completed">已完成</span></td>
+                                    <td>
+                                        <button class="btn-icon edit-event">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn-icon delete-event">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2024-01-14</td>
+                                    <td>10:00-17:00</td>
+                                    <td>预赛</td>
+                                    <td>主舞台</td>
+                                    <td><span class="status active">进行中</span></td>
+                                    <td>
+                                        <button class="btn-icon edit-event">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn-icon delete-event">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- 报名管理 -->
+                <section id="registration" class="content-section">
+                    <div class="section-header">
+                        <h2>报名管理</h2>
+                        <div class="header-actions">
+                            <button class="btn btn-secondary">
+                                <i class="fas fa-download"></i>
+                                导出数据
+                            </button>
+                            <button class="btn btn-primary">
+                                <i class="fas fa-filter"></i>
+                                筛选
+                            </button>
+                        </div>
+                    </div>
+                    <div class="registration-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">总报名</span>
+                            <span class="stat-value">1,234</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">待审核</span>
+                            <span class="stat-value">45</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">已通过</span>
+                            <span class="stat-value">1,156</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">已拒绝</span>
+                            <span class="stat-value">33</span>
+                        </div>
+                    </div>
+                    <div class="registration-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>姓名</th>
+                                    <th>组别</th>
+                                    <th>联系方式</th>
+                                    <th>报名时间</th>
+                                    <th>状态</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>张三</td>
+                                    <td>Breaking 成人组</td>
+                                    <td>13800138000</td>
+                                    <td>2024-01-10 14:30</td>
+                                    <td><span class="status pending">待审核</span></td>
+                                    <td>
+                                        <button class="btn-icon approve-registration">
+                                            <i class="fas fa-check"></i>
+                                        </button>
+                                        <button class="btn-icon reject-registration">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                        <button class="btn-icon view-registration">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>李四</td>
+                                    <td>Popping 青少年组</td>
+                                    <td>13900139000</td>
+                                    <td>2024-01-10 15:45</td>
+                                    <td><span class="status approved">已通过</span></td>
+                                    <td>
+                                        <button class="btn-icon view-registration">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="btn-icon edit-registration">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- 其他内容区域占位 -->
+                <section id="media" class="content-section">
+                    <h2>媒体管理</h2>
+                    <p>媒体文件上传和管理功能开发中...</p>
+                </section>
+
+                <section id="news" class="content-section">
+                    <h2>新闻管理</h2>
+                    <p>新闻发布和编辑功能开发中...</p>
+                </section>
+
+                <section id="settings" class="content-section">
+                    <h2>系统设置</h2>
+                    <p>系统配置和参数设置功能开发中...</p>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

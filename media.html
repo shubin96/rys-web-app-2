@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>媒体中心 - RenzYour Style 街舞大赛</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/logo.png" alt="RenzYour Style" class="logo-img">
+                <span class="logo-text">RenzYour <span class="style-text">Style</span></span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a href="schedule.html" class="nav-link">赛程</a>
+                </li>
+                <li class="nav-item">
+                    <a href="register.html" class="nav-link">报名</a>
+                </li>
+                <li class="nav-item">
+                    <a href="media.html" class="nav-link active">媒体</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">联系</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面标题 -->
+    <section class="page-header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="page-title">
+                    <span class="title-main">媒体中心</span>
+                    <span class="title-sub">Media Center</span>
+                </h1>
+                <p class="page-description">
+                    精彩瞬间，永恒记忆 - 探索街舞文化的视觉盛宴
+                </p>
+            </div>
+        </div>
+        <div class="header-decoration">
+            <div class="decoration-grid"></div>
+        </div>
+    </section>
+
+    <!-- 媒体导航 -->
+    <section class="media-nav">
+        <div class="container">
+            <div class="media-tabs">
+                <button class="media-tab active" data-category="all">
+                    <i class="fas fa-th"></i>
+                    <span>全部</span>
+                </button>
+                <button class="media-tab" data-category="photos">
+                    <i class="fas fa-camera"></i>
+                    <span>精彩图片</span>
+                </button>
+                <button class="media-tab" data-category="videos">
+                    <i class="fas fa-video"></i>
+                    <span>视频集锦</span>
+                </button>
+                <button class="media-tab" data-category="news">
+                    <i class="fas fa-newspaper"></i>
+                    <span>新闻资讯</span>
+                </button>
+                <button class="media-tab" data-category="live">
+                    <i class="fas fa-broadcast-tower"></i>
+                    <span>直播回放</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 媒体内容 -->
+    <section class="media-content">
+        <div class="container">
+            <!-- 精彩图片 -->
+            <div class="media-section" id="photos">
+                <div class="section-header">
+                    <h2 class="section-title">精彩图片</h2>
+                    <p class="section-subtitle">捕捉每一个精彩瞬间</p>
+                </div>
+                <div class="photo-gallery">
+                    <div class="photo-item" data-category="battle">
+                        <div class="photo-wrapper">
+                            <img src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=400&h=300&fit=crop" alt="街舞对战" loading="lazy">
+                            <div class="photo-overlay">
+                                <div class="photo-info">
+                                    <h4>激烈对战</h4>
+                                    <p>半决赛精彩瞬间</p>
+                                </div>
+                                <button class="photo-view" data-src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=800&h=600&fit=crop">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="photo-item" data-category="performance">
+                        <div class="photo-wrapper">
+                            <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=400&h=300&fit=crop" alt="精彩表演" loading="lazy">
+                            <div class="photo-overlay">
+                                <div class="photo-info">
+                                    <h4>开幕表演</h4>
+                                    <p>国际嘉宾精彩演出</p>
+                                </div>
+                                <button class="photo-view" data-src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=800&h=600&fit=crop">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="photo-item" data-category="audience">
+                        <div class="photo-wrapper">
+                            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=300&fit=crop" alt="观众热情" loading="lazy">
+                            <div class="photo-overlay">
+                                <div class="photo-info">
+                                    <h4>观众热情</h4>
+                                    <p>现场氛围火爆</p>
+                                </div>
+                                <button class="photo-view" data-src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=600&fit=crop">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="photo-item" data-category="winner">
+                        <div class="photo-wrapper">
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop" alt="冠军时刻" loading="lazy">
+                            <div class="photo-overlay">
+                                <div class="photo-info">
+                                    <h4>冠军时刻</h4>
+                                    <p>荣耀加冕瞬间</p>
+                                </div>
+                                <button class="photo-view" data-src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="photo-item" data-category="backstage">
+                        <div class="photo-wrapper">
+                            <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=400&h=300&fit=crop" alt="后台花絮" loading="lazy">
+                            <div class="photo-overlay">
+                                <div class="photo-info">
+                                    <h4>后台花絮</h4>
+                                    <p>选手准备瞬间</p>
+                                </div>
+                                <button class="photo-view" data-src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&h=600&fit=crop">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="photo-item" data-category="judge">
+                        <div class="photo-wrapper">
+                            <img src="https://images.unsplash.com/photo-1493676304819-0d7a8d026dcf?w=400&h=300&fit=crop" alt="评委点评" loading="lazy">
+                            <div class="photo-overlay">
+                                <div class="photo-info">
+                                    <h4>评委点评</h4>
+                                    <p>专业指导时刻</p>
+                                </div>
+                                <button class="photo-view" data-src="https://images.unsplash.com/photo-1493676304819-0d7a8d026dcf?w=800&h=600&fit=crop">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 视频集锦 -->
+            <div class="media-section" id="videos">
+                <div class="section-header">
+                    <h2 class="section-title">视频集锦</h2>
+                    <p class="section-subtitle">重温精彩比赛瞬间</p>
+                </div>
+                <div class="video-gallery">
+                    <div class="video-item">
+                        <div class="video-wrapper">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=600&h=400&fit=crop" alt="决赛集锦">
+                                <div class="video-play-btn">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <div class="video-duration">05:32</div>
+                            </div>
+                            <div class="video-info">
+                                <h4>决赛集锦</h4>
+                                <p>2024年度总决赛精彩回顾</p>
+                                <div class="video-meta">
+                                    <span><i class="fas fa-eye"></i> 128.5K</span>
+                                    <span><i class="fas fa-heart"></i> 3.2K</span>
+                                    <span><i class="fas fa-calendar"></i> 2024-01-15</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-wrapper">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=600&h=400&fit=crop" alt="开幕式表演">
+                                <div class="video-play-btn">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <div class="video-duration">08:15</div>
+                            </div>
+                            <div class="video-info">
+                                <h4>开幕式表演</h4>
+                                <p>国际嘉宾震撼开场表演</p>
+                                <div class="video-meta">
+                                    <span><i class="fas fa-eye"></i> 95.2K</span>
+                                    <span><i class="fas fa-heart"></i> 2.8K</span>
+                                    <span><i class="fas fa-calendar"></i> 2024-01-13</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-wrapper">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop" alt="选手采访">
+                                <div class="video-play-btn">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <div class="video-duration">03:45</div>
+                            </div>
+                            <div class="video-info">
+                                <h4>冠军采访</h4>
+                                <p>冠军选手赛后独家专访</p>
+                                <div class="video-meta">
+                                    <span><i class="fas fa-eye"></i> 67.8K</span>
+                                    <span><i class="fas fa-heart"></i> 1.9K</span>
+                                    <span><i class="fas fa-calendar"></i> 2024-01-16</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-wrapper">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop" alt="幕后花絮">
+                                <div class="video-play-btn">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <div class="video-duration">06:28</div>
+                            </div>
+                            <div class="video-info">
+                                <h4>幕后花絮</h4>
+                                <p>比赛背后的精彩故事</p>
+                                <div class="video-meta">
+                                    <span><i class="fas fa-eye"></i> 42.1K</span>
+                                    <span><i class="fas fa-heart"></i> 1.5K</span>
+                                    <span><i class="fas fa-calendar"></i> 2024-01-17</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 新闻资讯 -->
+            <div class="media-section" id="news">
+                <div class="section-header">
+                    <h2 class="section-title">新闻资讯</h2>
+                    <p class="section-subtitle">最新赛事动态与行业资讯</p>
+                </div>
+                <div class="news-grid">
+                    <article class="news-item featured">
+                        <div class="news-image">
+                            <img src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=600&h=400&fit=crop" alt="新闻图片">
+                            <div class="news-category">重要公告</div>
+                        </div>
+                        <div class="news-content">
+                            <h3>2024 RenzYour Style 圆满落幕，创历史新高</h3>
+                            <p>本届街舞大赛吸引了来自全球30个国家和地区的500余名选手参赛，现场观众超过2万人次，线上直播观看量突破500万...</p>
+                            <div class="news-meta">
+                                <span class="news-date"><i class="fas fa-calendar"></i> 2024-01-20</span>
+                                <span class="news-author"><i class="fas fa-user"></i> 赛事组委会</span>
+                                <span class="news-views"><i class="fas fa-eye"></i> 15.2K</span>
+                            </div>
+                            <a href="#" class="news-link">阅读全文 <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    
+                    <article class="news-item">
+                        <div class="news-image">
+                            <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=400&h=250&fit=crop" alt="新闻图片">
+                            <div class="news-category">赛事回顾</div>
+                        </div>
+                        <div class="news-content">
+                            <h4>决赛夜：见证新王者的诞生</h4>
+                            <p>经过三天激烈角逐，来自日本的选手Yuki凭借出色的技巧和创意夺得冠军...</p>
+                            <div class="news-meta">
+                                <span class="news-date"><i class="fas fa-calendar"></i> 2024-01-18</span>
+                                <span class="news-views"><i class="fas fa-eye"></i> 8.7K</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="news-item">
+                        <div class="news-image">
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop" alt="新闻图片">
+                            <div class="news-category">选手专访</div>
+                        </div>
+                        <div class="news-content">
+                            <h4>专访冠军Yuki：梦想成就传奇</h4>
+                            <p>"这个冠军对我来说意义重大，感谢所有支持我的人..."</p>
+                            <div class="news-meta">
+                                <span class="news-date"><i class="fas fa-calendar"></i> 2024-01-17</span>
+                                <span class="news-views"><i class="fas fa-eye"></i> 6.3K</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="news-item">
+                        <div class="news-image">
+                            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop" alt="新闻图片">
+                            <div class="news-category">行业动态</div>
+                        </div>
+                        <div class="news-content">
+                            <h4>街舞文化在中国的蓬勃发展</h4>
+                            <p>近年来，街舞文化在中国年轻人中越来越受欢迎，各类赛事层出不穷...</p>
+                            <div class="news-meta">
+                                <span class="news-date"><i class="fas fa-calendar"></i> 2024-01-15</span>
+                                <span class="news-views"><i class="fas fa-eye"></i> 4.9K</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="news-item">
+                        <div class="news-image">
+                            <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=400&h=250&fit=crop" alt="新闻图片">
+                            <div class="news-category">技巧分享</div>
+                        </div>
+                        <div class="news-content">
+                            <h4>评委解析：如何在比赛中脱颖而出</h4>
+                            <p>资深评委分享选手在比赛中需要注意的关键要素和技巧...</p>
+                            <div class="news-meta">
+                                <span class="news-date"><i class="fas fa-calendar"></i> 2024-01-12</span>
+                                <span class="news-views"><i class="fas fa-eye"></i> 7.1K</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="news-item">
+                        <div class="news-image">
+                            <img src="https://images.unsplash.com/photo-1493676304819-0d7a8d026dcf?w=400&h=250&fit=crop" alt="新闻图片">
+                            <div class="news-category">预告</div>
+                        </div>
+                        <div class="news-content">
+                            <h4>2025年赛事预告：更大舞台等你来战</h4>
+                            <p>明年的比赛将扩大规模，增设更多组别，奖金池也将进一步提升...</p>
+                            <div class="news-meta">
+                                <span class="news-date"><i class="fas fa-calendar"></i> 2024-01-10</span>
+                                <span class="news-views"><i class="fas fa-eye"></i> 12.5K</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- 直播回放 -->
+            <div class="media-section" id="live">
+                <div class="section-header">
+                    <h2 class="section-title">直播回放</h2>
+                    <p class="section-subtitle">完整赛事直播回放</p>
+                </div>
+                <div class="live-grid">
+                    <div class="live-item">
+                        <div class="live-wrapper">
+                            <div class="live-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=600&h=400&fit=crop" alt="决赛直播">
+                                <div class="live-play-btn">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <div class="live-duration">2:45:30</div>
+                                <div class="live-badge">完整回放</div>
+                            </div>
+                            <div class="live-info">
+                                <h4>决赛完整直播回放</h4>
+                                <p>2024年1月15日 决赛全程直播</p>
+                                <div class="live-stats">
+                                    <span><i class="fas fa-users"></i> 峰值观看：85.2K</span>
+                                    <span><i class="fas fa-comments"></i> 弹幕：12.8K</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="live-item">
+                        <div class="live-wrapper">
+                            <div class="live-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=600&h=400&fit=crop" alt="半决赛直播">
+                                <div class="live-play-btn">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <div class="live-duration">3:12:15</div>
+                                <div class="live-badge">完整回放</div>
+                            </div>
+                            <div class="live-info">
+                                <h4>半决赛完整直播回放</h4>
+                                <p>2024年1月14日 半决赛全程直播</p>
+                                <div class="live-stats">
+                                    <span><i class="fas fa-users"></i> 峰值观看：67.5K</span>
+                                    <span><i class="fas fa-comments"></i> 弹幕：9.2K</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="live-item">
+                        <div class="live-wrapper">
+                            <div class="live-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop" alt="开幕式直播">
+                                <div class="live-play-btn">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <div class="live-duration">1:28:45</div>
+                                <div class="live-badge">完整回放</div>
+                            </div>
+                            <div class="live-info">
+                                <h4>开幕式完整直播回放</h4>
+                                <p>2024年1月13日 开幕式全程直播</p>
+                                <div class="live-stats">
+                                    <span><i class="fas fa-users"></i> 峰值观看：92.1K</span>
+                                    <span><i class="fas fa-comments"></i> 弹幕：15.6K</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 下载专区 -->
+    <section class="download-section">
+        <div class="container">
+            <div class="download-content">
+                <div class="download-info">
+                    <h2>高清素材下载</h2>
+                    <p>提供高质量的比赛图片和视频素材，供媒体和粉丝使用</p>
+                    <div class="download-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">高清图片</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">精彩视频</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">10GB+</span>
+                            <span class="stat-label">素材容量</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="download-actions">
+                    <button class="download-btn primary">
+                        <i class="fas fa-download"></i>
+                        下载图片包
+                    </button>
+                    <button class="download-btn secondary">
+                        <i class="fas fa-video"></i>
+                        下载视频包
+                    </button>
+                    <button class="download-btn outline">
+                        <i class="fas fa-file-archive"></i>
+                        完整素材包
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="RenzYour Style">
+                        <span>RenzYour <span class="style-text">Style</span></span>
+                    </div>
+                    <p class="footer-description">
+                        专业的街舞赛事平台，致力于推广街舞文化，为舞者提供展示才华的舞台。
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-weibo"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-wechat"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-bilibili"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-douyin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="schedule.html">赛程安排</a></li>
+                        <li><a href="register.html">报名参赛</a></li>
+                        <li><a href="media.html">媒体中心</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系我们</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> info@renzyourstyle.com</p>
+                        <p><i class="fas fa-phone"></i> +86 400-123-4567</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 上海市黄浦区南京东路123号</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>关注我们</h4>
+                    <p>获取最新赛事资讯和精彩内容</p>
+                    <div class="newsletter">
+                        <input type="email" placeholder="输入邮箱地址">
+                        <button type="submit">订阅</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 RenzYour Style. 保留所有权利。</p>
+                <div class="footer-bottom-links">
+                    <a href="#">隐私政策</a>
+                    <a href="#">服务条款</a>
+                    <a href="#">网站地图</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 图片查看器模态框 -->
+    <div id="imageModal" class="image-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img id="modalImage" src="" alt="">
+            <div class="modal-nav">
+                <button id="prevImage" class="nav-btn"><i class="fas fa-chevron-left"></i></button>
+                <button id="nextImage" class="nav-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/media.js"></script>
+</body>
+</html>

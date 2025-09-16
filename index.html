@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repz Your Style - Street Dance Competition</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Component -->
+    <div id="header"></div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="grid-overlay"></div>
+            <video autoplay muted loop class="background-video">
+                <source src="assets/rys-2024-recap.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="hero-content" style="margin-top: 30%;">
+            <div class="hero-text">
+                <!-- <h1 class="hero-title">
+                    <span class="title-main">Repz Your</span>
+                    <span class="title-accent">STYLE!</span>
+                </h1> -->
+                <h3>Repz Your Style 2026</h3>
+                <div class="hero-info">
+                    <div class="info-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>December 15-16, 2024</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Lalaport Kuala Lumpur, Malaysia</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="register.html" class="btn btn-primary">Register Now</a>
+                    <a href="#about" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="countdown-container">
+                <h3>Counting Down To RYS 2026</h3>
+                <div class="countdown" id="countdown">
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="days">00</span>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="hours">00</span>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="minutes">00</span>
+                        <span class="countdown-label">Minutes</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="seconds">00</span>
+                        <span class="countdown-label">Seconds</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">The Largest Street Dance and Art Festival in Malaysia</h2>
+                <p class="section-subtitle">Get ready for Repz Your Style, Malaysia's grand celebration of art and street dance! Join us for three electrifying days packed with
+international dance battles, inspiring art exhibitions, hands-on workshops, and a vibrant local bazaar. Unleash your creativity and
+groove to the global rhythm at the largest event of its kind in Malaysia. Are you ready for 2026? Stay tuned for more info!</p>
+                
+                <!-- Image Slider -->
+                <div class="image-slider">
+                    <div class="slider-container">
+                        <div class="slide active">
+                            <img src="assets/photo/1.jpg" alt="Event Photo 1">
+                        </div>
+                        <div class="slide">
+                            <img src="assets/photo/2.jpg" alt="Event Photo 2">
+                        </div>
+                        <div class="slide">
+                            <img src="assets/photo/3.jpg" alt="Event Photo 3">
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                        <div class="slider-dots">
+                            <span class="dot active" data-slide="0"></span>
+                            <span class="dot" data-slide="1"></span>
+                            <span class="dot" data-slide="2"></span>
+                        </div>
+                        <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Repz Your Style TV Section -->
+    <section id="rys-tv" class="rys-tv">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Repz Your Style TV</h2>
+                <p class="section-subtitle">Missed the competition or couldn't catch it live?</p>
+                <p class="section-subtitle">Don't worry — watch all the highlights and full videos right here!</p>
+            </div>
+            
+            <div class="tv-content">
+                <div class="playlist-container">
+                    <div class="playlist">
+                        <h3 class="playlist-title">RYS 2024 Playlist</h3>
+                        <div class="playlist-thumbnail">
+                            <img src="assets/poster/1.jpg" alt="RYS 2024 Playlist">
+                            <div class="play-overlay">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="playlist">
+                        <h3 class="playlist-title">RYS 2025 Playlist</h3>
+                        <div class="playlist-thumbnail">
+                            <img src="assets/poster/2.jpg" alt="RYS 2025 Playlist">
+                            <div class="play-overlay">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Schedule Section -->
+    <!-- <section id="schedule" class="schedule">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Event Schedule</h2>
+                <p class="section-subtitle">Two Days of Exciting Competition, Don't Miss Out</p>
+            </div>
+            <div class="schedule-tabs">
+                <button class="tab-btn active" data-day="day1">December 15</button>
+                <button class="tab-btn" data-day="day2">December 16</button>
+            </div>
+            <div class="schedule-content">
+                <div class="day-schedule active" id="day1">
+                    <div class="schedule-item">
+                        <div class="time">09:00 - 10:00</div>
+                        <div class="event">
+                            <h4>Opening Ceremony & Check-in</h4>
+                            <p>Event opening and participant registration confirmation</p>
+                        </div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="time">10:00 - 12:00</div>
+                        <div class="event">
+                            <h4>Breaking Preliminaries</h4>
+                            <p>32 to 16, intense competition begins</p>
+                        </div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="time">14:00 - 16:00</div>
+                        <div class="event">
+                            <h4>Popping & Locking Preliminaries</h4>
+                            <p>Exciting showdown of popping and locking</p>
+                        </div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="time">16:30 - 18:00</div>
+                        <div class="event">
+                            <h4>Hip-hop & House Preliminaries</h4>
+                            <p>Hip-hop and house dance showcase</p>
+                        </div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="time">19:00 - 21:00</div>
+                        <div class="event">
+                            <h4>Opening Performance & Networking Night</h4>
+                            <p>Guest performances and participant networking</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="day-schedule" id="day2">
+                    <div class="schedule-item">
+                        <div class="time">09:00 - 11:00</div>
+                        <div class="event">
+                            <h4>Semi-finals All Categories</h4>
+                            <p>16 to 8, competition intensifies</p>
+                        </div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="time">11:30 - 13:00</div>
+                        <div class="event">
+                            <h4>Master Classes</h4>
+                            <p>Live teaching by international judges</p>
+                        </div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="time">14:00 - 16:00</div>
+                        <div class="event">
+                            <h4>Top 4 Finals</h4>
+                            <p>8 to 4, ultimate showdown</p>
+                        </div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="time">16:30 - 18:30</div>
+                        <div class="event">
+                            <h4>Grand Finals</h4>
+                            <p>Championship battle, moment of glory</p>
+                        </div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="time">19:00 - 21:00</div>
+                        <div class="event">
+                            <h4>Award Ceremony & Closing</h4>
+                            <p>Honor coronation, perfect conclusion</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Judges Section -->
+    <!-- <section id="judges" class="judges">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Judges & Guests</h2>
+                <p class="section-subtitle">International Top Dancers Gathered, Professional Authoritative Judging</p>
+            </div>
+            <div class="judges-grid">
+                <div class="judge-card">
+                    <div class="judge-image">
+                        <img src="assets/user-profile-icon.jpg" alt="Judge 1">
+                    </div>
+                    <div class="judge-info">
+                        <h3>Bboy Storm</h3>
+                        <p class="judge-title">Breaking Legend</p>
+                        <p class="judge-desc">World Breaking Champion, Red Bull BC One Winner</p>
+                    </div>
+                </div>
+                <div class="judge-card">
+                    <div class="judge-image">
+                        <img src="assets/user-profile-icon.jpg" alt="Judge 2">
+                    </div>
+                    <div class="judge-info">
+                        <h3>Poppin John</h3>
+                        <p class="judge-title">Popping Master</p>
+                        <p class="judge-desc">One of the founders of popping, street dance culture promoter</p>
+                    </div>
+                </div>
+                <div class="judge-card">
+                    <div class="judge-image">
+                        <img src="assets/user-profile-icon.jpg" alt="Judge 3">
+                    </div>
+                    <div class="judge-info">
+                        <h3>Kite</h3>
+                        <p class="judge-title">Hip-hop Pioneer</p>
+                        <p class="judge-desc">Top Japanese Hip-hop dancer, choreography master</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Media Section -->
+    <!-- <section id="media" class="media">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Media Center</h2>
+                <p class="section-subtitle">Exciting Moments, Eternal Memories</p>
+            </div>
+            <div class="media-tabs">
+                <button class="media-tab-btn active" data-type="photos">Photos</button>
+                <button class="media-tab-btn" data-type="videos">Videos</button>
+            </div>
+            <div class="media-content">
+                <div class="media-grid active" id="photos">
+                    <div class="media-item">
+                        <img src="assets/photo/1.jpg" alt="Gallery 1">
+                        <div class="media-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="media-item">
+                        <img src="assets/photo/2.jpg" alt="Gallery 2">
+                        <div class="media-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="media-item">
+                        <img src="assets/photo/3.jpg" alt="Gallery 3">
+                        <div class="media-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="media-grid" id="videos">
+                    <div class="video-item">
+                        <div class="video-thumbnail">
+                            <img src="assets/video1-thumb.jpg" alt="Video 1">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <h4>2023 Highlights Recap</h4>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-thumbnail">
+                            <img src="assets/video2-thumb.jpg" alt="Video 2">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <h4>Participant Training Behind the Scenes</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Footer Component -->
+    <div id="footer"></div>
+
+    <script src="js/components.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

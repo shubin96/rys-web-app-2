@@ -1,0 +1,707 @@
+/* 赛程页面专用样式 */
+
+/* 页面标题区域 */
+.page-header {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+    padding: 120px 0 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23ff6b35" stroke-width="0.5" opacity="0.3"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>') repeat;
+    opacity: 0.1;
+}
+
+.page-title {
+    font-family: 'Orbitron', monospace;
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 20px rgba(255, 107, 53, 0.5);
+    position: relative;
+    z-index: 1;
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    color: #b0b0b0;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.breadcrumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    position: relative;
+    z-index: 1;
+}
+
+.breadcrumb a {
+    color: #ff6b35;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    color: #fff;
+}
+
+.breadcrumb .separator {
+    color: #666;
+}
+
+.breadcrumb .current {
+    color: #fff;
+}
+
+/* 赛事概览 */
+.event-overview {
+    padding: 80px 0;
+    background: #0f0f0f;
+}
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.overview-card {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid rgba(255, 107, 53, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.overview-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.overview-card:hover::before {
+    left: 100%;
+}
+
+.overview-card:hover {
+    transform: translateY(-5px);
+    border-color: #ff6b35;
+    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.2);
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #ff6b35, #ff8c42);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.overview-card h3 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.overview-card p {
+    color: #ff6b35;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.overview-card .detail {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* 详细赛程 */
+.detailed-schedule {
+    padding: 80px 0;
+    background: #0a0a0a;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-family: 'Orbitron', monospace;
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(255, 107, 53, 0.3);
+}
+
+.section-header p {
+    color: #b0b0b0;
+    font-size: 1rem;
+}
+
+/* 日期选择器 */
+.schedule-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.schedule-tab {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border: 2px solid rgba(255, 107, 53, 0.3);
+    border-radius: 15px;
+    padding: 1.5rem 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    min-width: 150px;
+}
+
+.schedule-tab:hover {
+    border-color: #ff6b35;
+    transform: translateY(-2px);
+}
+
+.schedule-tab.active {
+    background: linear-gradient(135deg, #ff6b35, #ff8c42);
+    border-color: #ff6b35;
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+}
+
+.tab-date {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.tab-label {
+    font-size: 0.9rem;
+    color: #b0b0b0;
+}
+
+.schedule-tab.active .tab-label {
+    color: #fff;
+}
+
+/* 赛程内容 */
+.schedule-content {
+    display: none;
+    animation: fadeInUp 0.5s ease;
+}
+
+.schedule-content.active {
+    display: block;
+}
+
+.day-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 107, 53, 0.2);
+}
+
+.day-header h3 {
+    font-size: 2rem;
+    color: #ff6b35;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.day-header p {
+    color: #b0b0b0;
+    font-size: 1.1rem;
+}
+
+/* 时间轴 */
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, #ff6b35, #ff8c42);
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.timeline-item:nth-child(odd) {
+    flex-direction: row;
+}
+
+.timeline-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.timeline-time {
+    background: linear-gradient(135deg, #ff6b35, #ff8c42);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    position: relative;
+    z-index: 2;
+    margin: 0 2rem;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.timeline-content {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border: 1px solid rgba(255, 107, 53, 0.2);
+    border-radius: 15px;
+    padding: 1.5rem;
+    flex: 1;
+    max-width: 400px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+    border-color: #ff6b35;
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.2);
+    transform: translateY(-2px);
+}
+
+.timeline-content h4 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.timeline-content p {
+    color: #b0b0b0;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.timeline-location {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #ff6b35;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.timeline-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: rgba(255, 107, 53, 0.2);
+    color: #ff6b35;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 107, 53, 0.3);
+}
+
+.tag.special {
+    background: rgba(46, 213, 115, 0.2);
+    color: #2ed573;
+    border-color: rgba(46, 213, 115, 0.3);
+}
+
+.tag.final {
+    background: rgba(255, 193, 7, 0.2);
+    color: #ffc107;
+    border-color: rgba(255, 193, 7, 0.3);
+}
+
+/* 场馆信息 */
+.venue-info {
+    padding: 80px 0;
+    background: #0f0f0f;
+}
+
+.venue-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.venue-card {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 107, 53, 0.2);
+    transition: all 0.3s ease;
+}
+
+.venue-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(255, 107, 53, 0.2);
+}
+
+.venue-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.venue-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.venue-card:hover .venue-image img {
+    transform: scale(1.05);
+}
+
+.venue-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    padding: 1.5rem;
+    color: #fff;
+}
+
+.venue-overlay h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.venue-overlay p {
+    color: #b0b0b0;
+    font-size: 0.9rem;
+}
+
+.venue-details {
+    padding: 1.5rem;
+}
+
+.venue-details h4 {
+    color: #ff6b35;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.venue-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.venue-details li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #b0b0b0;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.venue-details li i {
+    color: #2ed573;
+    font-size: 0.8rem;
+}
+
+/* 观赛指南 */
+.viewing-guide {
+    padding: 80px 0;
+    background: #0a0a0a;
+}
+
+.guide-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.guide-item {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid rgba(255, 107, 53, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.guide-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.guide-item:hover::before {
+    left: 100%;
+}
+
+.guide-item:hover {
+    transform: translateY(-5px);
+    border-color: #ff6b35;
+    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.2);
+}
+
+.guide-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #ff6b35, #ff8c42);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.guide-item h3 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.guide-item p {
+    color: #b0b0b0;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.guide-link {
+    color: #ff6b35;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.guide-link:hover {
+    color: #fff;
+    border-bottom-color: #ff6b35;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2.5rem;
+    }
+    
+    .overview-grid,
+    .guide-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .venue-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .schedule-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .schedule-tab {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-item {
+        flex-direction: row !important;
+        padding-left: 50px;
+    }
+    
+    .timeline-time {
+        position: absolute;
+        left: -25px;
+        top: 0;
+        margin: 0;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        padding: 1rem 0.5rem;
+        min-height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .timeline-content {
+        max-width: none;
+        margin-left: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header {
+        padding: 100px 0 60px;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .event-overview,
+    .detailed-schedule,
+    .venue-info,
+    .viewing-guide {
+        padding: 60px 0;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .day-header {
+        padding: 1.5rem;
+    }
+    
+    .day-header h3 {
+        font-size: 1.5rem;
+    }
+    
+    .timeline-content {
+        padding: 1rem;
+    }
+    
+    .venue-details,
+    .guide-item {
+        padding: 1.5rem;
+    }
+}
+
+/* 动画效果 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* 时间轴动画 */
+.timeline-item:nth-child(odd) .timeline-content {
+    animation: slideInLeft 0.6s ease;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    animation: slideInRight 0.6s ease;
+}
+
+/* 滚动动画 */
+.timeline-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.timeline-item.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 自定义滚动条 */
+.timeline::-webkit-scrollbar {
+    width: 6px;
+}
+
+.timeline::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+}
+
+.timeline::-webkit-scrollbar-thumb {
+    background: #ff6b35;
+    border-radius: 3px;
+}
+
+.timeline::-webkit-scrollbar-thumb:hover {
+    background: #ff8c42;
+}

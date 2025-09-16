@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>赛程安排 - RYZ YOUR STYLE 街舞大赛</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/schedule.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/logo.png" alt="RYZ YOUR STYLE" class="logo-img">
+                <span class="logo-text">RYZ YOUR STYLE</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a href="register.html" class="nav-link">报名参赛</a>
+                </li>
+                <li class="nav-item">
+                    <a href="schedule.html" class="nav-link active">赛程安排</a>
+                </li>
+                <li class="nav-item">
+                    <a href="gallery.html" class="nav-link">精彩瞬间</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">联系我们</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面标题区域 -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">赛程安排</h1>
+            <p class="page-subtitle">三天精彩赛事，见证街舞巅峰对决</p>
+            <div class="breadcrumb">
+                <a href="index.html">首页</a>
+                <span class="separator">/</span>
+                <span class="current">赛程安排</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 赛事概览 -->
+    <section class="event-overview">
+        <div class="container">
+            <div class="overview-grid">
+                <div class="overview-card">
+                    <div class="card-icon">
+                        <i class="fas fa-calendar-week"></i>
+                    </div>
+                    <h3>比赛时间</h3>
+                    <p>2024年12月15-17日</p>
+                    <span class="detail">为期三天</span>
+                </div>
+                <div class="overview-card">
+                    <div class="card-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>比赛地点</h3>
+                    <p>上海体育馆</p>
+                    <span class="detail">主馆+训练馆</span>
+                </div>
+                <div class="overview-card">
+                    <div class="card-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>参赛选手</h3>
+                    <p>200+舞者</p>
+                    <span class="detail">8个组别</span>
+                </div>
+                <div class="overview-card">
+                    <div class="card-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>奖金总额</h3>
+                    <p>50万元</p>
+                    <span class="detail">丰厚奖励</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 详细赛程 -->
+    <section class="detailed-schedule">
+        <div class="container">
+            <div class="section-header">
+                <h2>详细赛程</h2>
+                <p>点击查看每日详细安排</p>
+            </div>
+
+            <!-- 日期选择器 -->
+            <div class="schedule-tabs">
+                <button class="schedule-tab active" data-day="day1">
+                    <div class="tab-date">12月15日</div>
+                    <div class="tab-label">预赛日</div>
+                </button>
+                <button class="schedule-tab" data-day="day2">
+                    <div class="tab-date">12月16日</div>
+                    <div class="tab-label">半决赛</div>
+                </button>
+                <button class="schedule-tab" data-day="day3">
+                    <div class="tab-date">12月17日</div>
+                    <div class="tab-label">决赛日</div>
+                </button>
+            </div>
+
+            <!-- 第一天赛程 -->
+            <div class="schedule-content active" id="day1">
+                <div class="day-header">
+                    <h3>12月15日 - 预赛日</h3>
+                    <p>各组别预赛，选拔优秀选手进入半决赛</p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-time">08:00 - 09:00</div>
+                        <div class="timeline-content">
+                            <h4>选手报到</h4>
+                            <p>选手签到、领取参赛物品、熟悉场地</p>
+                            <div class="timeline-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                上海体育馆大厅
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">09:00 - 09:30</div>
+                        <div class="timeline-content">
+                            <h4>开幕式</h4>
+                            <p>主办方致辞、评委介绍、赛事规则说明</p>
+                            <div class="timeline-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                主舞台
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">09:30 - 11:30</div>
+                        <div class="timeline-content">
+                            <h4>Breaking 预赛</h4>
+                            <p>霹雳舞组别预赛，32进16</p>
+                            <div class="timeline-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                主舞台
+                            </div>
+                            <div class="timeline-tags">
+                                <span class="tag">Breaking</span>
+                                <span class="tag">预赛</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">11:30 - 12:00</div>
+                        <div class="timeline-content">
+                            <h4>中场休息</h4>
+                            <p>选手休息、观众互动环节</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">12:00 - 14:00</div>
+                        <div class="timeline-content">
+                            <h4>Popping 预赛</h4>
+                            <p>机械舞组别预赛，32进16</p>
+                            <div class="timeline-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                主舞台
+                            </div>
+                            <div class="timeline-tags">
+                                <span class="tag">Popping</span>
+                                <span class="tag">预赛</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">14:00 - 15:00</div>
+                        <div class="timeline-content">
+                            <h4>午餐时间</h4>
+                            <p>选手和观众用餐休息</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">15:00 - 17:00</div>
+                        <div class="timeline-content">
+                            <h4>Locking & Hip-Hop 预赛</h4>
+                            <p>锁舞和嘻哈舞组别预赛</p>
+                            <div class="timeline-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                主舞台
+                            </div>
+                            <div class="timeline-tags">
+                                <span class="tag">Locking</span>
+                                <span class="tag">Hip-Hop</span>
+                                <span class="tag">预赛</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">17:00 - 19:00</div>
+                        <div class="timeline-content">
+                            <h4>其他组别预赛</h4>
+                            <p>House、Waacking、Krump、Freestyle 预赛</p>
+                            <div class="timeline-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                主舞台
+                            </div>
+                            <div class="timeline-tags">
+                                <span class="tag">House</span>
+                                <span class="tag">Waacking</span>
+                                <span class="tag">Krump</span>
+                                <span class="tag">Freestyle</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">19:00 - 20:00</div>
+                        <div class="timeline-content">
+                            <h4>预赛结果公布</h4>
+                            <p>公布各组别晋级名单，颁发晋级证书</p>
+                            <div class="timeline-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                主舞台
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 第二天赛程 -->
+            <div class="schedule-content" id="day2">
+                <div class="day-header">
+                    <h3>12月16日 - 半决赛</h3>
+                    <p>激烈角逐，争夺决赛席位</p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-time">09:00 - 09:30</div>
+                        <div class="timeline-content">
+                            <h4>选手热身</h4>
+                            <p>晋级选手热身准备，技术调试</p>
+                            <div class="timeline-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                训练馆
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">09:30 - 11:00</div>
+                        <div class="timeline-content">
+                            <h4>Breaking 半决赛</h4>
+                            <p>16进8，更加激烈的对决</p>
+                            <div class="timeline-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                主舞台
+                            </div>
+                            <div class="timeline-tags">
+                                <span class="tag">Breaking</span>
+                                <span class="tag">半决赛</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">11:00 - 12:30</div>
+                        <div class="timeline-content">
+                            <h4>Popping 半决赛</h4>
+                            <p>机械舞高手过招，精彩纷呈</p>
+                            <div class="timeline-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                主舞台
+                            </div>
+                            <div class="timeline-tags">
+                                <span class="tag">Popping</span>
+                                <span class="tag">半决赛</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">12:30 - 13:30</div>
+                        <div class="timeline-content">
+                            <h4>午餐时间</h4>
+                            <p>选手和观众用餐休息</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">13:30 - 15:00</div>
+                        <div class="timeline-content">
+                            <h4>特邀表演</h4>
+                            <p>国际知名舞者表演，大师课分享</p>
+                            <div class="timeline-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                主舞台
+                            </div>
+                            <div class="timeline-tags">
+                                <span class="tag special">特邀表演</span>
+                                <span class="tag special">大师课</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">15:00 - 17:30</div>
+                        <div class="timeline-content">
+                            <h4>其他组别半决赛</h4>
+                            <p>Locking、Hip-Hop、House、Waacking 等组别半决赛</p>
+                            <div class="timeline-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                主舞台
+                            </div>
+                            <div class="timeline-tags">
+                                <span class="tag">多组别</span>
+                                <span class="tag">半决赛</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">17:30 - 18:30</div>
+                        <div class="timeline-content">
+                            <h4>半决赛结果公布</h4>
+                            <p>公布决赛名单，选手采访</p>
+                            <div class="timeline-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                主舞台
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">19:00 - 21:00</div>
+                        <div class="timeline-content">
+                            <h4>街舞文化交流夜</h4>
+                            <p>选手交流、文化分享、音乐派对</p>
+                            <div class="timeline-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                体育馆广场
+                            </div>
+                            <div class="timeline-tags">
+                                <span class="tag special">文化交流</span>
+                                <span class="tag special">音乐派对</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 第三天赛程 -->
+            <div class="schedule-content" id="day3">
+                <div class="day-header">
+                    <h3>12月17日 - 决赛日</h3>
+                    <p>巅峰对决，冠军诞生</p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-time">10:00 - 10:30</div>
+                        <div class="timeline-content">
+                            <h4>决赛开幕表演</h4>
+                            <p>开场表演，营造决赛氛围</p>
+                            <div class="timeline-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                主舞台
+                            </div>
+                            <div class="timeline-tags">
+                                <span class="tag special">开幕表演</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">10:30 - 12:00</div>
+                        <div class="timeline-content">
+                            <h4>Breaking 决赛</h4>
+                            <p>8强决战，争夺Breaking冠军</p>
+                            <div class="timeline-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                主舞台
+                            </div>
+                            <div class="timeline-tags">
+                                <span class="tag final">Breaking</span>
+                                <span class="tag final">决赛</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">12:00 - 13:30</div>
+                        <div class="timeline-content">
+                            <h4>Popping 决赛</h4>
+                            <p>机械舞巅峰对决</p>
+                            <div class="timeline-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                主舞台
+                            </div>
+                            <div class="timeline-tags">
+                                <span class="tag final">Popping</span>
+                                <span class="tag final">决赛</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">13:30 - 14:30</div>
+                        <div class="timeline-content">
+                            <h4>午餐时间</h4>
+                            <p>选手和观众用餐休息</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">14:30 - 17:00</div>
+                        <div class="timeline-content">
+                            <h4>其他组别决赛</h4>
+                            <p>Locking、Hip-Hop、House、Waacking、Krump、Freestyle 决赛</p>
+                            <div class="timeline-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                主舞台
+                            </div>
+                            <div class="timeline-tags">
+                                <span class="tag final">多组别</span>
+                                <span class="tag final">决赛</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">17:00 - 17:30</div>
+                        <div class="timeline-content">
+                            <h4>全明星表演</h4>
+                            <p>评委和特邀嘉宾联合表演</p>
+                            <div class="timeline-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                主舞台
+                            </div>
+                            <div class="timeline-tags">
+                                <span class="tag special">全明星</span>
+                                <span class="tag special">表演</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">17:30 - 18:30</div>
+                        <div class="timeline-content">
+                            <h4>颁奖典礼</h4>
+                            <p>各组别冠亚季军颁奖，最佳人气奖等特别奖项</p>
+                            <div class="timeline-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                主舞台
+                            </div>
+                            <div class="timeline-tags">
+                                <span class="tag special">颁奖典礼</span>
+                                <span class="tag special">冠军诞生</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-time">18:30 - 19:00</div>
+                        <div class="timeline-content">
+                            <h4>闭幕式</h4>
+                            <p>感谢致辞，明年再会</p>
+                            <div class="timeline-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                主舞台
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 场馆信息 -->
+    <section class="venue-info">
+        <div class="container">
+            <div class="section-header">
+                <h2>场馆信息</h2>
+                <p>了解比赛场地详细信息</p>
+            </div>
+            <div class="venue-grid">
+                <div class="venue-card">
+                    <div class="venue-image">
+                        <img src="images/venue-main.jpg" alt="主舞台">
+                        <div class="venue-overlay">
+                            <h3>主舞台</h3>
+                            <p>上海体育馆主馆</p>
+                        </div>
+                    </div>
+                    <div class="venue-details">
+                        <h4>主比赛场地</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> 专业舞蹈地板</li>
+                            <li><i class="fas fa-check"></i> 4K高清直播设备</li>
+                            <li><i class="fas fa-check"></i> 专业音响系统</li>
+                            <li><i class="fas fa-check"></i> 观众席位3000个</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="venue-card">
+                    <div class="venue-image">
+                        <img src="images/venue-training.jpg" alt="训练馆">
+                        <div class="venue-overlay">
+                            <h3>训练馆</h3>
+                            <p>选手热身区域</p>
+                        </div>
+                    </div>
+                    <div class="venue-details">
+                        <h4>训练热身区</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> 专业练习镜墙</li>
+                            <li><i class="fas fa-check"></i> 独立音响系统</li>
+                            <li><i class="fas fa-check"></i> 休息更衣区域</li>
+                            <li><i class="fas fa-check"></i> 医疗急救站</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 观赛指南 -->
+    <section class="viewing-guide">
+        <div class="container">
+            <div class="section-header">
+                <h2>观赛指南</h2>
+                <p>让您的观赛体验更加完美</p>
+            </div>
+            <div class="guide-grid">
+                <div class="guide-item">
+                    <div class="guide-icon">
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                    <h3>购票信息</h3>
+                    <p>门票分为单日票和三日通票，VIP席位享受更佳观赛体验</p>
+                    <a href="#" class="guide-link">立即购票</a>
+                </div>
+                <div class="guide-item">
+                    <div class="guide-icon">
+                        <i class="fas fa-subway"></i>
+                    </div>
+                    <h3>交通指南</h3>
+                    <p>地铁1号线体育馆站，多条公交线路直达，提供停车服务</p>
+                    <a href="#" class="guide-link">查看路线</a>
+                </div>
+                <div class="guide-item">
+                    <div class="guide-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>餐饮服务</h3>
+                    <p>场馆内设有多个餐饮点，提供各类美食和饮品</p>
+                    <a href="#" class="guide-link">查看菜单</a>
+                </div>
+                <div class="guide-item">
+                    <div class="guide-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>拍照须知</h3>
+                    <p>允许拍照，但请勿使用闪光灯，尊重选手和其他观众</p>
+                    <a href="#" class="guide-link">了解详情</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="RYZ YOUR STYLE">
+                        <span>RYZ YOUR STYLE</span>
+                    </div>
+                    <p>展现你的街舞风采，释放内心的节拍</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-douyin"></i></a>
+                        <a href="#"><i class="fab fa-bilibili"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="register.html">报名参赛</a></li>
+                        <li><a href="schedule.html">赛程安排</a></li>
+                        <li><a href="gallery.html">精彩瞬间</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>联系信息</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> 400-123-4567</p>
+                        <p><i class="fas fa-envelope"></i> info@ryzyourstyle.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 上海市黄浦区南京东路123号</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>关注我们</h3>
+                    <p>扫码关注官方微信</p>
+                    <div class="qr-code">
+                        <img src="images/qr-code.png" alt="微信二维码">
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 RYZ YOUR STYLE. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/schedule.js"></script>
+</body>
+</html>
