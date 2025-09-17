@@ -53,7 +53,7 @@ body {
 }
 
 .logo-text {
-    font-family: 'Orbitron', monospace;
+    font-family: 'Rubik Medium', sans-serif;
     font-weight: 700;
     font-size: 1.2rem;
     background: linear-gradient(45deg, #00a0e4, #0055a4);
@@ -139,7 +139,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 50%, #d0d0d0 100%); /* 修改为浅灰色渐变 */
+    background: #222222;
 }
 
 .grid-overlay {
@@ -184,7 +184,7 @@ body {
 }
 
 .hero-title {
-    font-family: 'Orbitron', monospace;
+    font-family: 'Rubik Medium', sans-serif;
     font-size: 4rem;
     font-weight: 900;
     line-height: 1.1;
@@ -193,7 +193,7 @@ body {
 
 .title-main {
     display: block;
-    color: #333333; /* 修改标题颜色为深灰色 */
+    color: #ffffff; /* 修改标题颜色为白色，提高在黑色背景上的可读性 */
 }
 
 .title-accent {
@@ -216,7 +216,7 @@ body {
 
 .hero-subtitle {
     font-size: 1.5rem;
-    color: #555555; /* 修改副标题颜色为中灰色 */
+    color: #ffffff; /* 修改副标题颜色为白色，提高在黑色背景上的可读性 */
     margin-bottom: 30px;
 }
 
@@ -230,7 +230,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #333333; /* 修改信息项文本颜色为深灰色 */
+    color: #ffffff; /* 修改信息项文本颜色为白色，提高在黑色背景上的可读性 */
 }
 
 .info-item i {
@@ -267,7 +267,7 @@ body {
 
 .btn-secondary {
     background: transparent;
-    color: #333333;
+    color: #ffffff;
     border: 2px solid #00a0e4;
 }
 
@@ -285,7 +285,7 @@ body {
 .countdown-container h3 {
     font-size: 1.5rem;
     margin-bottom: 30px;
-    color: #555555;
+    color: #ffffff;
 }
 
 .countdown {
@@ -306,7 +306,7 @@ body {
 
 .countdown-number {
     display: block;
-    font-family: 'Orbitron', monospace;
+    font-family: 'Rubik Medium', sans-serif;
     font-size: 2rem;
     font-weight: 700;
     color: #00a0e4;
@@ -314,7 +314,7 @@ body {
 
 .countdown-label {
     font-size: 0.9rem;
-    color: #555555;
+    color: #ffffff;
     margin-top: 5px;
 }
 
@@ -329,7 +329,7 @@ section {
 }
 
 .section-title {
-    font-family: 'Orbitron', monospace;
+    font-family: 'Rubik Medium', sans-serif;
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 20px;
@@ -594,7 +594,7 @@ section {
 
 .stat-number {
     display: block;
-    font-family: 'Orbitron', monospace;
+    font-family: 'Rubik Medium', sans-serif;
     font-size: 3.5rem;
     font-weight: 700;
     background: linear-gradient(45deg, #00a0e4, #0055a4);
@@ -674,7 +674,7 @@ section {
 }
 
 .time {
-    font-family: 'Orbitron', monospace;
+    font-family: 'Rubik Medium', sans-serif;
     font-size: 1.2rem;
     font-weight: 700;
     color: #00a0e4;
@@ -909,7 +909,7 @@ section {
 }
 
 .footer-logo span {
-    font-family: 'Orbitron', monospace;
+    font-family: 'Rubik Medium', sans-serif;
     font-weight: 700;
     font-size: 1.2rem;
     background: linear-gradient(45deg, #00a0e4, #0055a4);
@@ -1367,8 +1367,8 @@ img.error + .image-placeholder {
 }
 
 .about-main-title {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 3.5rem;
+    font-family: 'Rubik Medium', sans-serif;
+    font-size: 2.0rem;
     font-weight: 700;
     margin-bottom: 3rem;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
@@ -1431,7 +1431,7 @@ img.error + .image-placeholder {
 }
 
 .story-title {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Rubik Medium', sans-serif;
     font-size: 2.2rem;
     color: #2c3e50;
     margin-bottom: 1.5rem;
@@ -1511,7 +1511,7 @@ img.error + .image-placeholder {
 }
 
 .vision-text h2 {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Rubik Medium', sans-serif;
     font-size: 2.8rem;
     font-weight: 700;
     background: linear-gradient(135deg, #ff6b35, #f7931e);
@@ -1571,7 +1571,7 @@ img.error + .image-placeholder {
 }
 
 .value-card h4 {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Rubik Medium', sans-serif;
     font-size: 1.3rem;
     font-weight: 600;
     color: #ffffff;
@@ -1645,7 +1645,7 @@ img.error + .image-placeholder {
 }
 
 .offering-card h3 {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Rubik Medium', sans-serif;
     font-size: 1.5rem;
     font-weight: 600;
     color: #ffffff;
@@ -1661,7 +1661,7 @@ img.error + .image-placeholder {
 /* About Page Responsive Design */
 @media (max-width: 768px) {
     .about-main-title {
-        font-size: 2.5rem;
+        font-size: 2.0rem;
     }
     
     .story-block {
@@ -1742,7 +1742,7 @@ img.error + .image-placeholder {
     font-weight: 700;
     color: #333;
     margin-bottom: 20px;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Rubik Medium', sans-serif;
 }
 
 .rys-tv .section-subtitle {
@@ -1789,7 +1789,7 @@ img.error + .image-placeholder {
     margin: 0;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Rubik Medium', sans-serif;
 }
 
 .playlist-thumbnail {
@@ -1836,45 +1836,101 @@ img.error + .image-placeholder {
     transform: translate(-50%, -50%) scale(1.1);
 }
 
-/* 响应式设计 */
+/* Mailing List Section */
+.mailing-list {
+    background: linear-gradient(135deg, #4c63ff 0%, #3b4cff 100%);
+    padding: 80px 0;
+    color: white;
+    text-align: center;
+}
+
+.mailing-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.mailing-text h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: white !important;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: white !important;
+    background-clip: unset !important;
+}
+
+.mailing-text p {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+.btn-mailing {
+    background: white;
+    color: #4c63ff;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-mailing:hover {
+    background: #f8f9ff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-mailing i {
+    transition: transform 0.3s ease;
+}
+
+.btn-mailing:hover i {
+    transform: translateX(5px);
+}
+
+/* Responsive Design for Mailing List */
 @media (max-width: 768px) {
-    .rys-tv {
+    .mailing-list {
         padding: 60px 0;
     }
     
-    .rys-tv .section-title {
+    .mailing-text h2 {
         font-size: 2.2rem;
     }
     
-    .rys-tv .section-subtitle {
+    .mailing-text p {
+        font-size: 1.1rem;
+    }
+    
+    .btn-mailing {
+        padding: 12px 25px;
         font-size: 1rem;
     }
-    
-    .playlist-container {
-        grid-template-columns: 1fr;
-        gap: 30px;
-        padding: 0 20px;
+}
+
+@media (max-width: 480px) {
+    .mailing-list {
+        padding: 50px 0;
     }
     
-    .playlist {
-        max-width: 100%;
+    .mailing-text h2 {
+        font-size: 1.8rem;
     }
     
-    .playlist-title {
-        font-size: 1.3rem;
-        padding: 20px 15px;
-    }
-    
-    .playlist-thumbnail {
-        height: 200px;
-    }
-    
-    .play-overlay {
-        width: 60px;
-        height: 60px;
-    }
-    
-    .play-overlay i {
-        font-size: 1.5rem;
+    .mailing-content {
+        gap: 25px;
     }
 }
+
+/* 响应式设计 */
