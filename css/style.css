@@ -990,6 +990,12 @@ section {
     color: #555555;
 }
 
+/* Hero text h3 styles */
+.hero-text h3 {
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
 /* 响应式设计 */
 @media (max-width: 768px) {
     .nav-menu {
