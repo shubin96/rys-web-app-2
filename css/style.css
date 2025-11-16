@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Noto Sans SC', sans-serif;
+    font-family: 'Roboto', 'Noto Sans SC', sans-serif;
     line-height: 1.6;
     color: #333333; /* 修改文本颜色为深灰色 */
     background-color: #ffffff; /* 修改背景色为白色 */
@@ -53,7 +53,7 @@ body {
 }
 
 .logo-text {
-    font-family: 'Rubik Medium', sans-serif;
+    font-family: 'Roboto', 'Noto Sans SC', sans-serif;
     font-weight: 700;
     font-size: 1.2rem;
     background: linear-gradient(45deg, #00a0e4, #0055a4);
@@ -184,7 +184,7 @@ body {
 }
 
 .hero-title {
-    font-family: 'Rubik Medium', sans-serif;
+    font-family: 'Roboto', 'Noto Sans SC', sans-serif;
     font-size: 4rem;
     font-weight: 900;
     line-height: 1.1;
@@ -306,7 +306,7 @@ body {
 
 .countdown-number {
     display: block;
-    font-family: 'Rubik Medium', sans-serif;
+    font-family: 'Roboto', 'Noto Sans SC', sans-serif;
     font-size: 2rem;
     font-weight: 700;
     color: #00a0e4;
@@ -329,7 +329,7 @@ section {
 }
 
 .section-title {
-    font-family: 'Rubik Medium', sans-serif;
+    font-family: 'Roboto', 'Noto Sans SC', sans-serif;
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 20px;
@@ -594,7 +594,7 @@ section {
 
 .stat-number {
     display: block;
-    font-family: 'Rubik Medium', sans-serif;
+    font-family: 'Roboto', 'Noto Sans SC', sans-serif;
     font-size: 3.5rem;
     font-weight: 700;
     background: linear-gradient(45deg, #00a0e4, #0055a4);
@@ -674,7 +674,7 @@ section {
 }
 
 .time {
-    font-family: 'Rubik Medium', sans-serif;
+    font-family: 'Roboto', 'Noto Sans SC', sans-serif;
     font-size: 1.2rem;
     font-weight: 700;
     color: #00a0e4;
@@ -909,7 +909,7 @@ section {
 }
 
 .footer-logo span {
-    font-family: 'Rubik Medium', sans-serif;
+    font-family: 'Roboto', 'Noto Sans SC', sans-serif;
     font-weight: 700;
     font-size: 1.2rem;
     background: linear-gradient(45deg, #00a0e4, #0055a4);
@@ -1373,7 +1373,7 @@ img.error + .image-placeholder {
 }
 
 .about-main-title {
-    font-family: 'Rubik Medium', sans-serif;
+    font-family: 'Roboto', 'Noto Sans SC', sans-serif;
     font-size: 2.0rem;
     font-weight: 700;
     margin-bottom: 3rem;
@@ -1437,7 +1437,7 @@ img.error + .image-placeholder {
 }
 
 .story-title {
-    font-family: 'Rubik Medium', sans-serif;
+    font-family: 'Roboto', 'Noto Sans SC', sans-serif;
     font-size: 2.2rem;
     color: #2c3e50;
     margin-bottom: 1.5rem;
@@ -1517,7 +1517,7 @@ img.error + .image-placeholder {
 }
 
 .vision-text h2 {
-    font-family: 'Rubik Medium', sans-serif;
+    font-family: 'Roboto', 'Noto Sans SC', sans-serif;
     font-size: 2.8rem;
     font-weight: 700;
     background: linear-gradient(135deg, #ff6b35, #f7931e);
@@ -1577,7 +1577,7 @@ img.error + .image-placeholder {
 }
 
 .value-card h4 {
-    font-family: 'Rubik Medium', sans-serif;
+    font-family: 'Roboto', 'Noto Sans SC', sans-serif;
     font-size: 1.3rem;
     font-weight: 600;
     color: #ffffff;
@@ -1651,7 +1651,7 @@ img.error + .image-placeholder {
 }
 
 .offering-card h3 {
-    font-family: 'Rubik Medium', sans-serif;
+    font-family: 'Roboto', 'Noto Sans SC', sans-serif;
     font-size: 1.5rem;
     font-weight: 600;
     color: #ffffff;
@@ -1748,7 +1748,7 @@ img.error + .image-placeholder {
     font-weight: 700;
     color: #333;
     margin-bottom: 20px;
-    font-family: 'Rubik Medium', sans-serif;
+    font-family: 'Roboto', 'Noto Sans SC', sans-serif;
 }
 
 .rys-tv .section-subtitle {
@@ -1795,7 +1795,7 @@ img.error + .image-placeholder {
     margin: 0;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
-    font-family: 'Rubik Medium', sans-serif;
+    font-family: 'Roboto', 'Noto Sans SC', sans-serif;
 }
 
 .playlist-thumbnail {
