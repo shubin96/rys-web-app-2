@@ -8,8 +8,10 @@
 body {
     font-family: 'Roboto', 'Noto Sans SC', sans-serif;
     line-height: 1.6;
-    color: #333333; /* 修改文本颜色为深灰色 */
-    background-color: #ffffff; /* 修改背景色为白色 */
+    color: #333333;
+    /* 修改文本颜色为深灰色 */
+    background-color: #ffffff;
+    /* 修改背景色为白色 */
     overflow-x: hidden;
 }
 
@@ -24,11 +26,13 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95); /* 修改为白色背景 */
+    background: rgba(255, 255, 255, 0.95);
+    /* 修改为白色背景 */
     backdrop-filter: blur(10px);
     z-index: 1000;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* 添加阴影效果 */
 }
 
 .nav-container {
@@ -70,15 +74,18 @@ body {
 }
 
 .nav-link {
-    color: #333333; /* 修改导航链接颜色为深灰色 */
+    color: #333333;
+    /* 修改导航链接颜色为深灰色 */
     text-decoration: none;
-    font-weight: 600; /* 增加字体粗细以提高可读性 */
+    font-weight: 600;
+    /* 增加字体粗细以提高可读性 */
     transition: all 0.3s ease;
     position: relative;
 }
 
 .nav-link:hover {
-    color: #00a0e4; /* 修改悬停颜色 */
+    color: #00a0e4;
+    /* 修改悬停颜色 */
 }
 
 .nav-link::after {
@@ -118,7 +125,8 @@ body {
 .bar {
     width: 25px;
     height: 3px;
-    background: #333333; /* 修改汉堡菜单颜色为深灰色 */
+    background: #333333;
+    /* 修改汉堡菜单颜色为深灰色 */
     margin: 3px 0;
     transition: 0.3s;
 }
@@ -133,7 +141,7 @@ body {
     overflow: hidden;
 }
 
-    .hero-background {
+.hero-background {
     position: absolute;
     top: 0;
     left: 0;
@@ -150,7 +158,8 @@ body {
     height: 100%;
     /* 已移除background-image和animation */
     background-size: 50px 50px;
-    z-index: -2; /* 确保视频在grid-overlay上方显示 */
+    z-index: -2;
+    /* 确保视频在grid-overlay上方显示 */
 }
 
 .background-video {
@@ -162,14 +171,20 @@ body {
     width: auto;
     height: auto;
     transform: translate(-50%, -50%);
-    z-index: 1; /* 提高视频的z-index，确保在grid-overlay上方 */
+    z-index: 1;
+    /* 提高视频的z-index，确保在grid-overlay上方 */
     opacity: 0.3;
     object-fit: cover;
 }
 
 @keyframes gridMove {
-    0% { transform: translate(0, 0) scale(1); }
-    100% { transform: translate(50px, 50px) scale(1); }
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(50px, 50px) scale(1);
+    }
 }
 
 .hero-content {
@@ -193,7 +208,8 @@ body {
 
 .title-main {
     display: block;
-    color: #ffffff; /* 修改标题颜色为白色，提高在黑色背景上的可读性 */
+    color: #ffffff;
+    /* 修改标题颜色为白色，提高在黑色背景上的可读性 */
 }
 
 .title-accent {
@@ -209,6 +225,7 @@ body {
     from {
         text-shadow: 0 0 20px rgba(0, 160, 228, 0.5);
     }
+
     to {
         text-shadow: 0 0 30px rgba(0, 85, 164, 0.8);
     }
@@ -216,7 +233,8 @@ body {
 
 .hero-subtitle {
     font-size: 1.5rem;
-    color: #ffffff; /* 修改副标题颜色为白色，提高在黑色背景上的可读性 */
+    color: #ffffff;
+    /* 修改副标题颜色为白色，提高在黑色背景上的可读性 */
     margin-bottom: 30px;
 }
 
@@ -230,11 +248,13 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #ffffff; /* 修改信息项文本颜色为白色，提高在黑色背景上的可读性 */
+    color: #ffffff;
+    /* 修改信息项文本颜色为白色，提高在黑色背景上的可读性 */
 }
 
 .info-item i {
-    color: #00a0e4; /* 修改图标颜色 */
+    color: #00a0e4;
+    /* 修改图标颜色 */
     font-size: 1.2rem;
 }
 
@@ -352,8 +372,10 @@ section {
 /* 图片轮播样式 */
 .image-slider {
     margin: 40px auto;
-    max-width: 1000px; /* 增加最大宽度 */
-    width: 90%; /* 确保在小屏幕上也能占据足够空间 */
+    max-width: 1000px;
+    /* 增加最大宽度 */
+    width: 90%;
+    /* 确保在小屏幕上也能占据足够空间 */
     position: relative;
     overflow: hidden;
     border-radius: 15px;
@@ -363,7 +385,8 @@ section {
 .slider-container {
     display: flex;
     position: relative;
-    height: 550px; /* 增加高度 */
+    height: 550px;
+    /* 增加高度 */
     overflow: hidden;
 }
 
@@ -389,24 +412,30 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px; /* 增加内边距 */
+    padding: 20px;
+    /* 增加内边距 */
     position: absolute;
     bottom: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.6); /* 增加背景不透明度 */
+    background: rgba(0, 0, 0, 0.6);
+    /* 增加背景不透明度 */
 }
 
-.prev-btn, .next-btn {
+.prev-btn,
+.next-btn {
     background: transparent;
     border: none;
-    font-size: 1.5rem; /* 增大按钮图标尺寸 */
-    padding: 8px 15px; /* 增加按钮内边距 */
+    font-size: 1.5rem;
+    /* 增大按钮图标尺寸 */
+    padding: 8px 15px;
+    /* 增加按钮内边距 */
     color: white;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
-.prev-btn:hover, .next-btn:hover {
+.prev-btn:hover,
+.next-btn:hover {
     color: #00a0e4;
 }
 
@@ -416,18 +445,22 @@ section {
 }
 
 .dot {
-    width: 16px; /* 增大指示点尺寸 */
-    height: 16px; /* 增大指示点尺寸 */
+    width: 16px;
+    /* 增大指示点尺寸 */
+    height: 16px;
+    /* 增大指示点尺寸 */
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.5);
     cursor: pointer;
     transition: all 0.3s ease;
-    margin: 0 5px; /* 增加间距 */
+    margin: 0 5px;
+    /* 增加间距 */
 }
 
 .dot.active {
     background: #00a0e4;
-    transform: scale(1.3); /* 增大活动状态的缩放比例 */
+    transform: scale(1.3);
+    /* 增大活动状态的缩放比例 */
 }
 
 /* About Section - Modern Layout */
@@ -1010,14 +1043,24 @@ section {
         padding: 20px 0;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
-    
+
     .nav-menu .nav-link {
         color: #333333;
         font-weight: 600;
         padding: 10px 0;
         display: block;
     }
-    
+
+    /* Fix for Register Now button on mobile */
+    .nav-menu .register-btn {
+        display: inline-block;
+        width: auto;
+        padding: 10px 30px;
+        margin-top: 15px;
+        color: white;
+        background: linear-gradient(45deg, #00a0e4, #0055a4);
+    }
+
     .nav-menu.active {
         left: 0;
     }
@@ -1049,7 +1092,7 @@ section {
     }
 
     .hero-info {
-        flex-direction: column;
+        /* flex-direction: column; */
         gap: 15px;
     }
 
@@ -1066,10 +1109,6 @@ section {
     .countdown-item {
         min-width: 60px;
         padding: 15px;
-    }
-
-    .countdown-number {
-        font-size: 1.5rem;
     }
 
     .section-title {
@@ -1161,6 +1200,7 @@ section {
         flex-direction: column;
         align-items: center;
     }
+
 }
 
 @media (max-width: 480px) {
@@ -1207,10 +1247,10 @@ section {
 /* 图片占位符样式 */
 .image-placeholder {
     background-color: #f0f0f0;
-    background-image: 
-        linear-gradient(45deg, #e0e0e0 25%, transparent 25%), 
-        linear-gradient(-45deg, #e0e0e0 25%, transparent 25%), 
-        linear-gradient(45deg, transparent 75%, #e0e0e0 75%), 
+    background-image:
+        linear-gradient(45deg, #e0e0e0 25%, transparent 25%),
+        linear-gradient(-45deg, #e0e0e0 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #e0e0e0 75%),
         linear-gradient(-45deg, transparent 75%, #e0e0e0 75%);
     background-size: 20px 20px;
     background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
@@ -1233,7 +1273,7 @@ img.error {
     display: none;
 }
 
-img.error + .image-placeholder {
+img.error+.image-placeholder {
     display: flex;
 }
 
@@ -1377,7 +1417,7 @@ img.error + .image-placeholder {
     font-size: 2.0rem;
     font-weight: 700;
     margin-bottom: 3rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero-image-container {
@@ -1389,12 +1429,12 @@ img.error + .image-placeholder {
     width: 100%;
     height: auto;
     border-radius: 15px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
     margin-bottom: 1.5rem;
 }
 
 .download-link {
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     padding: 1.5rem;
     border-radius: 10px;
     backdrop-filter: blur(10px);
@@ -1428,7 +1468,7 @@ img.error + .image-placeholder {
     background: white;
     padding: 3rem;
     border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease;
 }
 
@@ -1492,7 +1532,7 @@ img.error + .image-placeholder {
 }
 
 .vision-block .story-text p {
-    color: rgba(255,255,255,0.9);
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .vision-highlight {
@@ -1669,41 +1709,41 @@ img.error + .image-placeholder {
     .about-main-title {
         font-size: 2.0rem;
     }
-    
+
     .story-block {
         padding: 2rem;
         margin-bottom: 2rem;
     }
-    
+
     .story-title {
         font-size: 1.8rem;
     }
-    
+
     .story-text p {
         font-size: 1rem;
     }
-    
+
     .hero-image-container {
         padding: 0 1rem;
     }
-    
+
     .download-link {
         padding: 1rem;
     }
-    
+
     .download-btn {
         font-size: 0.8rem;
     }
-    
+
     .vision-content {
         grid-template-columns: 1fr;
         gap: 50px;
     }
-    
+
     .vision-text h2 {
         font-size: 2.2rem;
     }
-    
+
     .offerings-grid {
         grid-template-columns: 1fr;
         gap: 30px;
@@ -1714,19 +1754,19 @@ img.error + .image-placeholder {
     .about-hero {
         padding: 120px 0 80px;
     }
-    
+
     .about-hero-title {
         font-size: 2rem;
     }
-    
+
     .timeline-content h3 {
         font-size: 1.4rem;
     }
-    
+
     .vision-text h2 {
         font-size: 1.8rem;
     }
-    
+
     .offering-card {
         padding: 30px 20px;
     }
@@ -1844,7 +1884,7 @@ img.error + .image-placeholder {
 
 /* Mailing List Section */
 .mailing-list {
-    background: linear-gradient(135deg, #4c63ff 0%, #3b4cff 100%);
+    background: linear-gradient(45deg, #00a0e4, #0055a4);
     padding: 80px 0;
     color: white;
     text-align: center;
@@ -1878,7 +1918,7 @@ img.error + .image-placeholder {
 
 .btn-mailing {
     background: white;
-    color: #4c63ff;
+    color: #00a0e4;
     padding: 15px 30px;
     font-size: 1.1rem;
     font-weight: 600;
@@ -1910,15 +1950,15 @@ img.error + .image-placeholder {
     .mailing-list {
         padding: 60px 0;
     }
-    
+
     .mailing-text h2 {
         font-size: 2.2rem;
     }
-    
+
     .mailing-text p {
         font-size: 1.1rem;
     }
-    
+
     .btn-mailing {
         padding: 12px 25px;
         font-size: 1rem;
@@ -1929,14 +1969,227 @@ img.error + .image-placeholder {
     .mailing-list {
         padding: 50px 0;
     }
-    
+
     .mailing-text h2 {
         font-size: 1.8rem;
     }
-    
+
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.rys-tv .section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Roboto', 'Noto Sans SC', sans-serif;
+}
+
+.rys-tv .section-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.tv-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.playlist-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+    justify-items: center;
+}
+
+.playlist {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    width: 100%;
+    max-width: 450px;
+}
+
+.playlist:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.playlist-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    padding: 25px 20px;
+    margin: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-family: 'Roboto', 'Noto Sans SC', sans-serif;
+}
+
+.playlist-thumbnail {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.playlist-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.playlist:hover .playlist-thumbnail img {
+    transform: scale(1.05);
+}
+
+.play-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.play-overlay i {
+    font-size: 2rem;
+    color: white;
+    margin-left: 5px;
+}
+
+.playlist:hover .play-overlay {
+    background: rgba(102, 126, 234, 0.9);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Mailing List Section */
+.mailing-list {
+    background: linear-gradient(45deg, #00a0e4, #0055a4);
+    padding: 80px 0;
+    color: white;
+    text-align: center;
+}
+
+.mailing-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.mailing-text h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: white !important;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: white !important;
+    background-clip: unset !important;
+}
+
+.mailing-text p {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+.btn-mailing {
+    background: white;
+    color: #00a0e4;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-mailing:hover {
+    background: #f8f9ff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-mailing i {
+    transition: transform 0.3s ease;
+}
+
+.btn-mailing:hover i {
+    transform: translateX(5px);
+}
+
+/* Responsive Design for Mailing List */
+@media (max-width: 768px) {
+    .mailing-list {
+        padding: 60px 0;
+    }
+
+    .mailing-text h2 {
+        font-size: 2.2rem;
+    }
+
+    .mailing-text p {
+        font-size: 1.1rem;
+    }
+
+    .btn-mailing {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .mailing-list {
+        padding: 50px 0;
+    }
+
+    .mailing-text h2 {
+        font-size: 1.8rem;
+    }
+
     .mailing-content {
         gap: 25px;
     }
 }
 
 /* 响应式设计 */
+
+/* Playlist Link Styles */
+.playlist-link {
+    text-decoration: none !important;
+    color: inherit;
+    display: block;
+}
+
+.playlist-link h3,
+.playlist-link .playlist-title {
+    text-decoration: none !important;
+    border-bottom: none !important;
+}
+
+.playlist-link:hover .playlist-title {
+    color: #00a0e4;
+    /* Optional: Add hover effect to title */
+}

@@ -5,18 +5,18 @@ const totalSlides = 4; // Number of event cards
 function moveCarousel(direction) {
     const carousel = document.querySelector('.events-carousel');
     if (!carousel) return; // 安全检查
-    
+
     const cardWidth = 300; // Card width + gap
-    
+
     eventsCurrentSlide += direction;
-    
+
     // Loop back to beginning/end
     if (eventsCurrentSlide < 0) {
         eventsCurrentSlide = totalSlides - 1;
     } else if (eventsCurrentSlide >= totalSlides) {
         eventsCurrentSlide = 0;
     }
-    
+
     const translateX = -eventsCurrentSlide * cardWidth;
     carousel.style.transform = `translateX(${translateX}px)`;
 }
@@ -38,13 +38,13 @@ function stopCarouselAutoPlay() {
 }
 
 // 等待DOM加载完成
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // 检查是否存在轮播容器，如果存在才启动轮播功能
     const carouselContainer = document.querySelector('.events-carousel-container');
     if (carouselContainer) {
         // Start auto-play when page loads
         startCarouselAutoPlay();
-        
+
         // Pause auto-play on hover
         carouselContainer.addEventListener('mouseenter', stopCarouselAutoPlay);
         carouselContainer.addEventListener('mouseleave', startCarouselAutoPlay);
@@ -55,30 +55,31 @@ document.addEventListener('DOMContentLoaded', function() {
     if (imageSlider) {
         initImageSlider();
     }
-    
-    // 移动端导航菜单切换
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
 
-    if (hamburger && navMenu) {
-        hamburger.addEventListener('click', function() {
+    // 移动端导航菜单切换
+    // 移动端导航菜单切换 - 使用事件委托处理动态加载的元素
+    document.addEventListener('click', function (e) {
+        const hamburger = e.target.closest('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if (hamburger && navMenu) {
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
-        });
-    }
-    
+        }
+    });
+
     // 图片轮播功能实现
     function initImageSlider() {
         const slides = document.querySelectorAll('.slide');
         const dots = document.querySelectorAll('.dot');
         const prevBtn = document.querySelector('.prev-btn');
         const nextBtn = document.querySelector('.next-btn');
-        
+
         // 检查是否存在轮播元素，如果不存在则直接返回
         if (slides.length === 0 || dots.length === 0) {
             return;
         }
-        
+
         let currentSlide = 0;
         let slideInterval;
 
@@ -96,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // 更新幻灯片显示状态
             slides.forEach(slide => slide.classList.remove('active'));
             dots.forEach(dot => dot.classList.remove('active'));
-            
+
             if (slides[currentSlide] && dots[currentSlide]) {
                 slides[currentSlide].classList.add('active');
                 dots[currentSlide].classList.add('active');
@@ -161,11 +162,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     // 点击导航链接时关闭移动端菜单
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-        });
+    // 点击导航链接时关闭移动端菜单 - 使用事件委托
+    document.addEventListener('click', function (e) {
+        if (e.target.matches('.nav-link')) {
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+            if (hamburger && navMenu) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
+        }
     });
 
     // 平滑滚动到锚点
@@ -183,7 +189,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // 导航栏滚动效果
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         const navbar = document.querySelector('.navbar');
         if (window.scrollY > 50) {
             navbar.style.background = 'rgba(255, 255, 255, 0.98)';
@@ -194,8 +200,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 倒计时功能
     function updateCountdown() {
-        // 设置目标日期 (2024年12月15日)
-        const targetDate = new Date('2026-12-15T09:00:00').getTime();
+        const targetDate = new Date('2026-06-26T10:00:00').getTime();
         const now = new Date().getTime();
         const difference = targetDate - now;
 
@@ -215,7 +220,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('hours').textContent = '00';
             document.getElementById('minutes').textContent = '00';
             document.getElementById('seconds').textContent = '00';
-            
+
             // 可以在这里添加活动已开始的提示
             const countdownContainer = document.querySelector('.countdown-container h3');
             if (countdownContainer) {
@@ -233,13 +238,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const daySchedules = document.querySelectorAll('.day-schedule');
 
     tabButtons.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             const targetDay = this.getAttribute('data-day');
-            
+
             // 移除所有活动状态
             tabButtons.forEach(btn => btn.classList.remove('active'));
             daySchedules.forEach(schedule => schedule.classList.remove('active'));
-            
+
             // 添加活动状态
             this.classList.add('active');
             document.getElementById(targetDay).classList.add('active');
@@ -251,13 +256,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const mediaGrids = document.querySelectorAll('.media-grid');
 
     mediaTabButtons.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             const targetType = this.getAttribute('data-type');
-            
+
             // 移除所有活动状态
             mediaTabButtons.forEach(btn => btn.classList.remove('active'));
             mediaGrids.forEach(grid => grid.classList.remove('active'));
-            
+
             // 添加活动状态
             this.classList.add('active');
             document.getElementById(targetType).classList.add('active');
@@ -267,14 +272,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // 数字动画效果
     function animateNumbers() {
         const statNumbers = document.querySelectorAll('.stat-number');
-        
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const target = entry.target;
                     const finalNumber = target.textContent;
                     const numericValue = parseInt(finalNumber.replace(/[^0-9]/g, ''));
-                    
+
                     if (numericValue > 0) {
                         animateNumber(target, 0, numericValue, finalNumber);
                         observer.unobserve(target);
@@ -291,15 +296,15 @@ document.addEventListener('DOMContentLoaded', function() {
     function animateNumber(element, start, end, originalText) {
         const duration = 2000; // 2秒动画
         const startTime = performance.now();
-        
+
         function updateNumber(currentTime) {
             const elapsed = currentTime - startTime;
             const progress = Math.min(elapsed / duration, 1);
-            
+
             // 使用缓动函数
             const easeOutQuart = 1 - Math.pow(1 - progress, 4);
             const current = Math.floor(start + (end - start) * easeOutQuart);
-            
+
             if (originalText.includes('万')) {
                 element.textContent = current + '万';
             } else if (originalText.includes('+')) {
@@ -307,14 +312,14 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 element.textContent = current;
             }
-            
+
             if (progress < 1) {
                 requestAnimationFrame(updateNumber);
             } else {
                 element.textContent = originalText;
             }
         }
-        
+
         requestAnimationFrame(updateNumber);
     }
 
@@ -324,7 +329,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 滚动动画效果
     function addScrollAnimations() {
         const animatedElements = document.querySelectorAll('.judge-card, .feature-item, .schedule-item, .media-item');
-        
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -351,7 +356,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 媒体项目点击事件（图片放大效果）
     const mediaItems = document.querySelectorAll('.media-item');
     mediaItems.forEach(item => {
-        item.addEventListener('click', function() {
+        item.addEventListener('click', function () {
             const img = this.querySelector('img');
             if (img) {
                 // 这里可以添加图片放大的模态框功能
@@ -364,7 +369,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 视频播放按钮点击事件
     const playButtons = document.querySelectorAll('.play-button');
     playButtons.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             // 这里可以添加视频播放功能
             console.log('点击了播放按钮');
             // 可以集成视频播放器或跳转到视频页面
@@ -375,7 +380,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function validateForm(form) {
         const requiredFields = form.querySelectorAll('[required]');
         let isValid = true;
-        
+
         requiredFields.forEach(field => {
             if (!field.value.trim()) {
                 isValid = false;
@@ -384,18 +389,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 field.classList.remove('error');
             }
         });
-        
+
         return isValid;
     }
 
     // 添加输入框焦点效果
     const inputs = document.querySelectorAll('input, textarea, select');
     inputs.forEach(input => {
-        input.addEventListener('focus', function() {
+        input.addEventListener('focus', function () {
             this.parentElement.classList.add('focused');
         });
-        
-        input.addEventListener('blur', function() {
+
+        input.addEventListener('blur', function () {
             if (!this.value) {
                 this.parentElement.classList.remove('focused');
             }
@@ -406,7 +411,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function pageLoadAnimation() {
         const hero = document.querySelector('.hero');
         const navbar = document.querySelector('.navbar');
-        
+
         // 添加加载完成的类
         setTimeout(() => {
             document.body.classList.add('loaded');
@@ -420,12 +425,12 @@ document.addEventListener('DOMContentLoaded', function() {
     function addMouseFollowEffect() {
         let mouseX = 0;
         let mouseY = 0;
-        
+
         document.addEventListener('mousemove', (e) => {
             mouseX = e.clientX;
             mouseY = e.clientY;
         });
-        
+
         // 可以在这里添加鼠标跟随的视觉效果
     }
 
@@ -455,7 +460,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', optimizedScrollHandler);
 
     // 添加键盘导航支持
-    document.addEventListener('keydown', function(e) {
+    document.addEventListener('keydown', function (e) {
         // ESC键关闭移动端菜单
         if (e.key === 'Escape') {
             hamburger.classList.remove('active');
